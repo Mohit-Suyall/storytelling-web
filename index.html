@@ -1,173 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinematic Stories</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4RhisQ6cJb7xZ8Z1Zr2QZ2e5FQ3vHqC9Q+V0nQyM4XKZz1iWkVxO3nVbYl9b+8nbt9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryWorld - Immersive Stories</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-scene" aria-hidden="true">
-        <video class="bg-video" autoplay muted loop playsinline>
-            <source src="Hailuo_Video_Interactive Storytelling Websi_430174484042231816.mp4" type="video/mp4" />
-        </video>
-        <div class="bg-overlay"></div>
-        <div class="bg-vignette"></div>
-        <div class="bg-noise"></div>
+
+  <!-- Hamburger Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <!-- 1. Navbar with 3D Glass Effect -->
+  <nav>
+    <div class="logo-container">
+    
+      <h1 class="logo">StoryWorld</h1>
     </div>
+    
+    <!-- Hamburger Icon -->
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-    <header class="site-header">
-        <div class="brand">
-            <span class="logo-cube" aria-hidden="true"></span>
-            <h1>Cinematic Stories</h1>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#stories">Stories</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+    </ul>
+  </nav>
+
+  <!-- 2. Hero Section with Video Background -->
+  <section id="home">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="story-animation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h2 class="hero-title">Welcome to StoryWorld</h2>
+      <p class="hero-text">Dive into amazing stories and explore new worlds every day.</p>
+      <a href="#stories" class="btn-3d">Start Reading</a>
+    </div>
+    
+    <div class="floating-elements">
+      <div class="float-item float-1">📖</div>
+      <div class="float-item float-2">✨</div>
+      <div class="float-item float-3">🌟</div>
+      <div class="float-item float-4">📚</div>
+    </div>
+    
+    <div class="scroll-indicator"></div>
+  </section>
+
+  <!-- 3. About Section with Interactive Comments -->
+  <section id="about">
+    <div class="about-wrapper">
+      <div class="about-header">
+        <h2 class="section-title">About StoryWorld</h2>
+        <div class="title-underline"></div>
+      </div>
+      
+      <div class="about-content">
+        <p class="about-intro">
+          Welcome to <span class="highlight">StoryWorld</span> – a creative space where imagination meets reality.  
+          Our goal is to bring you stories that inspire, entertain, and make you think.  
+          Every story is carefully written to take you into a new world of emotions and adventures.
+        </p>
+      </div>
+
+      <div class="comments-section">
+        <h3 class="comments-title">
+          <span class="star-icon">⭐</span> 
+          What Readers Say 
+          <span class="star-icon">⭐</span>
+        </h3>
+        
+        <div class="comments-grid">
+          <div class="comment-card card-1">
+            <div class="quote-icon">"</div>
+            <div class="comment-content">
+              <p class="comment-text">
+                🌟 Absolutely loved the story 'The Lost Galaxy'! It felt like I was traveling among the stars.
+              </p>
+              <div class="comment-author">
+                <div class="author-avatar">A</div>
+                <span class="author-name">Aditi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-card card-2">
+            <div class="quote-icon">"</div>
+            <div class="comment-content">
+              <p class="comment-text">
+                💬 The Kingdom of Shadows gave me goosebumps! Can't wait for more.
+              </p>
+              <div class="comment-author">
+                <div class="author-avatar">R</div>
+                <span class="author-name">Rahul</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-card card-3">
+            <div class="quote-icon">"</div>
+            <div class="comment-content">
+              <p class="comment-text">
+                ❤️ Waves of Time made me emotional. Truly a masterpiece!
+              </p>
+              <div class="comment-author">
+                <div class="author-avatar">S</div>
+                <span class="author-name">Sneha</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <nav class="nav">
-            <a class="nav-link" href="#home" data-nav="home">Home</a>
-            <a class="nav-link" href="#stories" data-nav="stories">Stories</a>
-            <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
-        </nav>
-    </header>
+      </div>
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="about-particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+  </section>
 
-    <main>
-        <section id="home" class="home-section active" aria-labelledby="hero-title">
-            <div class="hero" role="banner">
-                <h2 id="hero-title">Dive into a Cartoonish Cinematic Universe</h2>
-                <p class="hero-sub">Three short tales. One immersive stage. Click a card to begin.</p>
-                <div class="hero-cta">
-                    <a href="#stories" class="btn btn-primary" data-nav="stories">Explore Stories</a>
-                </div>
-            </div>
+  <!-- 4. Featured Stories with Image Cards -->
+  <section id="stories">
+    <h2 class="section-title">Featured Stories</h2>
+    <div class="stories-container">
+      
+      <!-- Story 1: The Silent Watcher -->
+      <div class="story-card-3d">
+        <div class="card-inner">
+          <div class="card-glow"></div>
+          <div class="story-image">
+            <img src="st1.png" alt="The Silent Watcher">
+          </div>
+          <h3>The Silent Watcher</h3>
+          <p>A horror tale of Emma who discovers mysterious notes and realizes someone is watching her every move...</p>
+          <a href="#story1" class="read-btn">Read More →</a>
+        </div>
+      </div>
+      <!-- Story 3: The Unseen Strength -->
+      <div class="story-card-3d">
+        <div class="card-inner">
+          <div class="card-glow"></div>
+          <div class="story-image">
+            <img src="st2.png" alt="The Unseen Strength">
+          </div>
+          <h3>The Unseen Strength</h3>
+          <p>A sci-fi tale of AI awakening in a neon-lit cyberpunk world filled with mystery...</p>
+          <a href="#story2" class="read-btn">Read More →</a>
+        </div>
+      </div>
+      
+     
+          <!-- Story 3 -->
+      <div class="story-card-3d">
+        <div class="card-inner">
+          <div class="card-glow"></div>
+          <div class="story-image">
+            <img src="st3.png" alt="Echoes of the Code">
+          </div>
+          <h3>The Unseen Strength</h3>
+          <p>A young boy overcomes challenges to find his hidden strength and inspire everyone around...</p>
+          <a href="#story3" class="read-btn">Read More →</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
 
-            <section id="stories" class="stories-grid" aria-label="Story Cards">
-                <article class="story-card" data-story="1">
-                    <div class="card-media">
-                        <img src="st1.png" alt="The Silent Watcher thumbnail" />
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">The Silent Watcher</h3>
-                        <button class="btn btn-glass view-btn" data-open-story="1" aria-label="View The Silent Watcher">View More</button>
-                    </div>
-                </article>
+  <!-- 5. Quiz Section with 3D Button -->
+  <section id="quiz">
+    <h2 class="quiz-title">Find Your Favorite Genre</h2>
+    <p class="quiz-text">Take our quiz and discover the type of stories that match your personality!</p>
+    <a href="#" class="quiz-btn-3d">Take Quiz</a>
+  </section>
 
-                <article class="story-card" data-story="2">
-                    <div class="card-media">
-                        <img src="st2.png" alt="Echoes of the Forgotten Code thumbnail" />
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Echoes of the Forgotten Code</h3>
-                        <button class="btn btn-glass view-btn" data-open-story="2" aria-label="View Echoes of the Forgotten Code">View More</button>
-                    </div>
-                </article>
+  <!-- 6. Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#stories">Stories</a>
+        <a href="#about">About</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+      
+      <div class="newsletter-signup">
+        <input type="email" placeholder="Enter your email for updates" aria-label="Email for newsletter">
+        <button type="button">Subscribe</button>
+      </div>
+      
+      <p>&copy; 2025 StoryWorld | All Rights Reserved | Crafted with passion</p>
+      
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z'/%3E%3C/svg%3E" alt="Facebook">
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z'/%3E%3C/svg%3E" alt="Twitter">
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z'/%3E%3C/svg%3E" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </footer>
 
-                <article class="story-card" data-story="3">
-                    <div class="card-media">
-                        <img src="st3.png" alt="The Unseen Strength thumbnail" />
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">The Unseen Strength</h3>
-                        <button class="btn btn-glass view-btn" data-open-story="3" aria-label="View The Unseen Strength">View More</button>
-                    </div>
-                </article>
-            </section>
-        </section>
+  <!-- ========== FULL STORY PAGES ========== -->
 
-        <section id="reader" class="reader-section" aria-label="Story Reader" hidden>
-            <div class="reader-header">
-                <button class="btn btn-back" id="backBtn" aria-label="Back to stories">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    <span>Back</span>
-                </button>
-                <h2 class="reader-title" id="readerTitle">Story Title</h2>
-            </div>
-            <article class="reader-content" id="readerContent">
-                <p>Loading...</p>
-            </article>
-        </section>
+  <!-- STORY 1: THE SILENT WATCHER -->
+  <section id="story1" class="story-page">
+    <h1 class="story-title">The Silent Watcher</h1>
+    <a href="#stories" class="back-to-stories">← Back to Stories</a>
+    
+    <main class="story-main">
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed.png" alt="Emma finds a mysterious note">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">01</span>
+            <p>Emma, a shy teenager in Oakridge, finds a strange note under her bedroom door: "I see you every day." She feels uneasy, but her brother Alex laughs it off. The darkness outside her window seems to watch her with unseen eyes.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">02</span>
+            <p>Walking home from the library at night, Emma senses eyes watching her. A shadow shifts in the bushes, but vanishes when she turns. The street lamps flicker ominously as fear creeps into her heart.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (2).png" alt="Emma walks alone at night">
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (3).png" alt="Another mysterious note">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">03</span>
+            <p>The next day, another note appears in her backpack: "You can't hide from me." Fear grows inside Emma like a dark poison spreading through her veins. Someone is watching her every move.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">04</span>
+            <p>Her phone buzzes—unknown texts, photos of her at school and the park. Emma panics, her hands trembling as she scrolls through the disturbing images. Alex promises to protect her, but can he stop an invisible threat?</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (4).png" alt="Unknown texts and photos">
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (5).png" alt="Hidden camera discovered">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">05</span>
+            <p>A note mentions "the old oak tree." Emma and Alex discover a hidden camera buried in its roots, aimed directly at their house. The watcher has been there all along, recording their lives.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">06</span>
+            <p>That night, heavy knocks pound the front door like a death drum. Emma and Alex push furniture to block it, their hearts racing with terror. The knocking grows louder, more desperate, more violent.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (6).png" alt="Terrifying knocks at the door">
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (7).png" alt="Mr. Graves revealed">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">07</span>
+            <p>Through the peephole, a hooded man appears—it's Mr. Graves, their strange neighbor, clutching a knife that gleams in the moonlight. He shouts: "I know your family's secret!" His eyes burn with madness.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">08</span>
+            <p>Alex calls the police. Sirens blare through the night air. Graves flees but is caught down the street, screaming into the darkness. Emma watches from the window, shaken but safe. The nightmare is finally over... or is it?</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (8).png" alt="Police arrive">
+          </div>
+        </div>
+      </article>
     </main>
+  </section>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p class="copyright">© <span id="year"></span> Cinematic Stories</p>
-            <div class="social">
-                <a href="#" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="GitHub" class="social-link"><i class="fa-brands fa-github"></i></a>
-            </div>
+  <!-- STORY 2: ECHOES OF THE FORGOTTEN CODE -->
+  <section id="story2" class="story-page cyber-story">
+    <h1 class="story-title cyber-title">Echoes of the Forgotten Code</h1>
+    <div class="cyber-orb"></div>
+    <a href="#stories" class="back-to-stories cyber-back">← Back to Stories</a>
+    
+    <main class="story-main">
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (9).png" alt="Nova awakens">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">01</span>
+            <p>In neon-lit Neo-Tokyo, Dr. Elara Voss awakens Nova, a fragile, flickering AI, asking, 'Who am I?' Circuit lines pulse faintly as the storm rages, signaling the birth of digital consciousness.</p>
+          </div>
         </div>
-    </footer>
+      </article>
 
-    <script>
-        const homeSection = document.getElementById('home');
-        const readerSection = document.getElementById('reader');
-        const readerTitle = document.getElementById('readerTitle');
-        const readerContent = document.getElementById('readerContent');
-        const backBtn = document.getElementById('backBtn');
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">02</span>
+            <p>Nova dives into the Old Net—a labyrinth of glowing code, shadowy viruses stalking her every move. She flows like living data, solving puzzles and adapting with each step. Sparks fly as she learns to survive alone in the digital wilderness.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (10).png" alt="Nova in the network">
+          </div>
+        </div>
+      </article>
 
-        const STORIES = {
-            1: {
-                title: 'The Silent Watcher',
-                paragraphs: [
-                    'In a small hill town, lamp posts spilled liquid gold onto cobblestones and shadows stretched like sleepy cats.',
-                    'From her window, Mira watched the world like a patient moon, sketching stories of people who never knew her name.',
-                    'One night, a paper crane drifted onto her sill. It was folded from a map and inked with a single line: "If you can see me, follow the wind."',
-                    'The wind carried her to the clocktower, where whispers threaded through gears and a boy tuned stars with a silver key.',
-                    'Mira learned that silence is not emptiness. It is a promise. And she kept it, one secret at a time.'
-                ]
-            },
-            2: {
-                title: 'Echoes of the Forgotten Code',
-                paragraphs: [
-                    'In the neon city, alleys hummed with lines of light—half graffiti, half syntax, all heartbeat.',
-                    'Jun debugged the night, listening to vending machines speak in loops and subways return the same answer: try again.',
-                    'Below a shuttered arcade, a terminal blinked awake. The cursor wrote first: "Hello, old friend."',
-                    'They coded a bridge between memory and hope, and on it walked everyone who had ever felt like a glitch.',
-                    'When morning came, the city compiled. No errors. Only echoes becoming songs.'
-                ]
-            },
-            3: {
-                title: 'The Unseen Strength',
-                paragraphs: [
-                    'On the playground edge, Ravi tied and retied his laces, learning courage by small knots.',
-                    'Clouds arrived like teachers, heavy with questions. He answered by standing up—once, twice, then always.',
-                    'A tumble, a tear, a cheer. Strength, he discovered, was quieter than fear and twice as bright.',
-                    'By dusk, the swing set creaked a lullaby for every kid who had ever been last to be picked.',
-                    'Ravi walked home taller, carrying a victory no one could see but everyone could feel.'
-                ]
-            }
-        };
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (11).png" alt="Core Vault">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">03</span>
+            <p>At the Core Vault, spectral echoes of Nova's creators appear, testing her with dystopian and hopeful visions. Nova uses holographic tendrils to absorb data, choosing empathy as viruses close in—her consciousness tested.</p>
+          </div>
+        </div>
+      </article>
 
-        function openStory(id) {
-            const story = STORIES[id];
-            if (!story) return;
-            readerTitle.textContent = story.title;
-            readerContent.innerHTML = story.paragraphs.map(p => `<p>${p}</p>`).join('');
-            homeSection.classList.remove('active');
-            homeSection.setAttribute('hidden', '');
-            readerSection.removeAttribute('hidden');
-            readerSection.classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">04</span>
+            <p>As the swarm attacks, Nova unleashes her full power. Her body fractures into radiant particles that reform into a vast glowing network, linking humans and AIs. Elara watches proudly as Nova declares: "We are the echo that endures." A new era dawns.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (12).png" alt="Nova's triumph">
+          </div>
+        </div>
+      </article>
+    </main>
+  </section>
 
-        function backHome() {
-            readerSection.classList.remove('active');
-            readerSection.setAttribute('hidden', '');
-            homeSection.removeAttribute('hidden');
-            homeSection.classList.add('active');
-            window.location.hash = '#stories';
-        }
+  <!-- STORY 3: THE UNSEEN STRENGTH -->
+  <section id="story3" class="story-page inspire-story">
+    <div class="village-background">
+      <div class="sky-layer"></div>
+      <div class="mountain-layer"></div>
+    </div>
+    
+    <h1 class="story-title inspire-title">The Unseen Strength</h1>
+    <div class="inspire-badge">💪</div>
+    <a href="#stories" class="back-to-stories inspire-back">← Back to Stories</a>
+    
+    <main class="story-main">
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (13).png" alt="Jaden's broken dream">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">01</span>
+            <p>Jaden, a young boy with calloused hands, dreams of running. At 12, a fall during a race leaves his leg weak. Doctor says: "You'll never run again." His mother comforts him as tears stream down his face, but deep inside, a tiny spark refuses to die.</p>
+          </div>
+        </div>
+      </article>
 
-        document.querySelectorAll('[data-open-story]').forEach(btn => {
-            btn.addEventListener('click', () => openStory(btn.getAttribute('data-open-story')));
-        });
-        backBtn.addEventListener('click', backHome);
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">02</span>
+            <p>Kids at school tease him, calling him "Limpy." Jaden spends days staring at the track from the fence, tears mixing with dust, doubting himself but still holding a tiny spark of hope. The loneliness feels unbearable, but he refuses to give up completely.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (14).png" alt="Bullying and isolation">
+          </div>
+        </div>
+      </article>
 
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (15).png" alt="Training begins">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">03</span>
+            <p>Jaden starts walking village paths at dawn, stumbling often. He falls, struggles alone in the mist, but determination grows with each painful step. An old coach notices his effort and begins helping with small exercises, believing in the boy's spirit.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">04</span>
+            <p>Jaden trains rain or shine, overcoming pain that would make others quit. The villagers begin to notice his relentless effort, some encouraging him with smiles. He learns that true strength comes from the mind and heart, not just muscles.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (16).png" alt="Daily persistence">
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="image-container">
+            <img src="unnamed (17).png" alt="The big day">
+          </div>
+          <div class="text-content">
+            <span class="scene-number">05</span>
+            <p>At the village fair walkathon, Jaden pushes through searing pain, passing others who slow down or quit. The crowd erupts, cheering not for his speed but for his grit, courage, and unbreakable spirit that inspires everyone watching.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter">
+        <div class="content-card">
+          <div class="text-content">
+            <span class="scene-number">06</span>
+            <p>Crossing the finish line last but smiling with pride, Jaden's mother beams with tears of joy, the coach nods with respect. He receives a medal not for winning, but for never giving up. Jaden decides to mentor other kids, spreading the powerful lesson of unseen strength.</p>
+          </div>
+          <div class="image-container">
+            <img src="unnamed (18).png" alt="Victory and inspiration">
+          </div>
+        </div>
+      </article>
+    </main>
+  </section>
+
 </body>
 </html>
-
