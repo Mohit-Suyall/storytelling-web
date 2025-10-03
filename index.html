@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinematic Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4RhisQ6cJb7xZ8Z1Zr2QZ2e5FQ3vHqC9Q+V0nQyM4XKZz1iWkVxO3nVbYl9b+8nbt9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="bg-scene" aria-hidden="true">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="Hailuo_Video_Interactive Storytelling Websi_430174484042231816.mp4" type="video/mp4" />
+        </video>
+        <div class="bg-overlay"></div>
+        <div class="bg-vignette"></div>
+        <div class="bg-noise"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo-cube" aria-hidden="true"></span>
+            <h1>Cinematic Stories</h1>
+        </div>
+        <nav class="nav">
+            <a class="nav-link" href="#home" data-nav="home">Home</a>
+            <a class="nav-link" href="#stories" data-nav="stories">Stories</a>
+            <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section active" aria-labelledby="hero-title">
+            <div class="hero" role="banner">
+                <h2 id="hero-title">Dive into a Cartoonish Cinematic Universe</h2>
+                <p class="hero-sub">Three short tales. One immersive stage. Click a card to begin.</p>
+                <div class="hero-cta">
+                    <a href="#stories" class="btn btn-primary" data-nav="stories">Explore Stories</a>
+                </div>
+            </div>
+
+            <section id="stories" class="stories-grid" aria-label="Story Cards">
+                <article class="story-card" data-story="1">
+                    <div class="card-media">
+                        <img src="st1.png" alt="The Silent Watcher thumbnail" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">The Silent Watcher</h3>
+                        <button class="btn btn-glass view-btn" data-open-story="1" aria-label="View The Silent Watcher">View More</button>
+                    </div>
+                </article>
+
+                <article class="story-card" data-story="2">
+                    <div class="card-media">
+                        <img src="st2.png" alt="Echoes of the Forgotten Code thumbnail" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Echoes of the Forgotten Code</h3>
+                        <button class="btn btn-glass view-btn" data-open-story="2" aria-label="View Echoes of the Forgotten Code">View More</button>
+                    </div>
+                </article>
+
+                <article class="story-card" data-story="3">
+                    <div class="card-media">
+                        <img src="st3.png" alt="The Unseen Strength thumbnail" />
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">The Unseen Strength</h3>
+                        <button class="btn btn-glass view-btn" data-open-story="3" aria-label="View The Unseen Strength">View More</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section id="reader" class="reader-section" aria-label="Story Reader" hidden>
+            <div class="reader-header">
+                <button class="btn btn-back" id="backBtn" aria-label="Back to stories">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
+                <h2 class="reader-title" id="readerTitle">Story Title</h2>
+            </div>
+            <article class="reader-content" id="readerContent">
+                <p>Loading...</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="copyright">© <span id="year"></span> Cinematic Stories</p>
+            <div class="social">
+                <a href="#" aria-label="Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub" class="social-link"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const homeSection = document.getElementById('home');
+        const readerSection = document.getElementById('reader');
+        const readerTitle = document.getElementById('readerTitle');
+        const readerContent = document.getElementById('readerContent');
+        const backBtn = document.getElementById('backBtn');
+
+        const STORIES = {
+            1: {
+                title: 'The Silent Watcher',
+                paragraphs: [
+                    'In a small hill town, lamp posts spilled liquid gold onto cobblestones and shadows stretched like sleepy cats.',
+                    'From her window, Mira watched the world like a patient moon, sketching stories of people who never knew her name.',
+                    'One night, a paper crane drifted onto her sill. It was folded from a map and inked with a single line: "If you can see me, follow the wind."',
+                    'The wind carried her to the clocktower, where whispers threaded through gears and a boy tuned stars with a silver key.',
+                    'Mira learned that silence is not emptiness. It is a promise. And she kept it, one secret at a time.'
+                ]
+            },
+            2: {
+                title: 'Echoes of the Forgotten Code',
+                paragraphs: [
+                    'In the neon city, alleys hummed with lines of light—half graffiti, half syntax, all heartbeat.',
+                    'Jun debugged the night, listening to vending machines speak in loops and subways return the same answer: try again.',
+                    'Below a shuttered arcade, a terminal blinked awake. The cursor wrote first: "Hello, old friend."',
+                    'They coded a bridge between memory and hope, and on it walked everyone who had ever felt like a glitch.',
+                    'When morning came, the city compiled. No errors. Only echoes becoming songs.'
+                ]
+            },
+            3: {
+                title: 'The Unseen Strength',
+                paragraphs: [
+                    'On the playground edge, Ravi tied and retied his laces, learning courage by small knots.',
+                    'Clouds arrived like teachers, heavy with questions. He answered by standing up—once, twice, then always.',
+                    'A tumble, a tear, a cheer. Strength, he discovered, was quieter than fear and twice as bright.',
+                    'By dusk, the swing set creaked a lullaby for every kid who had ever been last to be picked.',
+                    'Ravi walked home taller, carrying a victory no one could see but everyone could feel.'
+                ]
+            }
+        };
+
+        function openStory(id) {
+            const story = STORIES[id];
+            if (!story) return;
+            readerTitle.textContent = story.title;
+            readerContent.innerHTML = story.paragraphs.map(p => `<p>${p}</p>`).join('');
+            homeSection.classList.remove('active');
+            homeSection.setAttribute('hidden', '');
+            readerSection.removeAttribute('hidden');
+            readerSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function backHome() {
+            readerSection.classList.remove('active');
+            readerSection.setAttribute('hidden', '');
+            homeSection.removeAttribute('hidden');
+            homeSection.classList.add('active');
+            window.location.hash = '#stories';
+        }
+
+        document.querySelectorAll('[data-open-story]').forEach(btn => {
+            btn.addEventListener('click', () => openStory(btn.getAttribute('data-open-story')));
+        });
+        backBtn.addEventListener('click', backHome);
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
